@@ -267,9 +267,15 @@
     {% if user %}
     <div class="row">
         <div class="col-sm-6">
+            {% if user.profile %}
             <div class="img-div">
                 <img src="{{ user.profile.url }}" class="img-fluid" alt="Responsive image">
             </div>
+            {% else%}
+            <div class="img-div">
+                <img src="" class="img-fluid" alt="Responsive image">
+            </div>
+            {% endif %}
         </div>
         <div class="col-sm-6 mt-5">
             <h1>{{ user.fullname }}</h1>
