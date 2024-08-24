@@ -69,7 +69,7 @@ def index(request):
         "edu": edu,
         "cert": cert,
         "exper": exper,
-        "proj": proj
+        "project": proj
     }
 
     #contact section
@@ -146,7 +146,7 @@ def enter_education(request):
             )
         db.save()
 
-    return render(request, "user/education.html")
+    return render(request, "user/Education.html")
 
 def enter_certification(request):
     if request.method == "POST":
