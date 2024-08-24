@@ -146,7 +146,7 @@ def enter_education(request):
             )
         db.save()
 
-    return render(request, "user/Education.html")
+    return render(request, "user/education.html")
 
 def enter_certification(request):
     if request.method == "POST":
