@@ -9,7 +9,7 @@
     <style>
         body{
             margin: 0;
-            background-color: rgb(244, 244, 244);
+            background-color: rgb(255, 255, 255);
         }
         nav{
             width: 100%;
@@ -43,20 +43,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white p-2">
-        <a class="navbar-brand text-light" href="#">Navbar</a>
+        <a class="navbar-brand text-light" href="#">Portfolioo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">Pricing</a>
+              <a class="nav-link text-light" href="{% url 'signup' %}">SignUp</a>
             </li>
           </ul>
         </div>
@@ -79,9 +73,11 @@
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             {{error}}
+            
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-md align-item-center btn-dark mb-5 mt-5">Login</button>
             </div>
+            <a href="{% url 'signup' %}" class="text-center">Dont have account</a>
           </form>
     </div>
 </body>
