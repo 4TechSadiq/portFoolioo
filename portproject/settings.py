@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'portproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'defaultdb',
-        'HOST' : 'pg-f4fc0a-gamboy4884-5edd.h.aivencloud.com',
-        'USER' : 'avnadmin',
-        'PASSWORD' : 'AVNS_UOKr9zZzMo1jOgYpxdn',
-        'PORT' : '26091',
+        'NAME': 'verceldb',
+        'HOST' : 'ep-winter-butterfly-a4khfuha-pooler.us-east-1.aws.neon.tech',
+        'USER' : 'default',
+        'PASSWORD' : '6TYPQyZwap1h',
+        'PORT' : '5432',
         
     }
 }
