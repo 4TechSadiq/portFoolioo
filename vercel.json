@@ -23,9 +23,5 @@
         "src": "/(.*)",
         "dest": "portproject/wsgi.py"
       },
-    {
-      "src": "/media/(.*)",
-      "dest": "/media/$1"
-    },
     ]
   }
