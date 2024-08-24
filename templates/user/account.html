@@ -291,7 +291,9 @@
                 {% for ed in edu %}
                 <div class="col-sm-3 mt-5 mt-5 ">
                     <div class="card shadow " style="width: 18rem;">
+                        {% if ed.image %}
                         <img class="card-img-top" src="{{ ed.image.url }}" alt="Card image cap">
+                        {% endif %}
                         <div class="card-body">
                           <h5 class="card-title">{{ ed.course }}</h5>
                           <p class="card-text">{{ ed.institute }}</p>
@@ -312,7 +314,9 @@
                 {% for certifcate in cert %}
                 <div class="col-sm-3 mt-5">
                     <div class="card shadow " style="width: 18rem;">
+                        {% if certifcate.image %}
                         <img class="card-img-top" src="certifcate.image.url" alt="Card image cap">
+                        {% endif %}
                         <div class="card-body">
                           <h5 class="card-title">{{certifcate.domain}}</h5>
                           <p class="card-text">{{certifcate.duration}}</p>
@@ -332,7 +336,9 @@
                 {% for experiance in  exper %}
                 <div class="col-sm-3 mt-5">
                     <div class="card shadow" style="width: 18rem;">
+                        {% if experiance.image %}
                         <img class="card-img-top" src="{{ experiance.image }}" alt="Card image cap">
+                        {% endif %}
                         <div class="card-body">
                           <h5 class="card-title">{{ experiance.company_name }}</h5>
                           <p class="card-text">{{ experiance.domain }}</p>
@@ -353,7 +359,9 @@
                 {% for item in project %}
                 <div class="col-sm-3 mt-5">
                     <div class="card shadow " style="width: 18rem;">
+                        {% if item.image %}
                         <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+                        {% endif %}
                         <div class="card-body">
                           <h5 class="card-title">{{ item.project_name }}</h5>
                           <p class="card-text">{{ item.link }}</p>
