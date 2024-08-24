@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Sadiq Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(252, 252, 253);
+        }
+        nav{
+            background-color: black;
+            width: 100%;
+            height: 50px;
+            box-shadow: 5px 5px 5px rgb(113, 113, 113);
+
+        }
+        .hero{
+            width: 100%;
+            height: 650px;
+        }
+        .img-div{
+            margin-left: 5%;
+            margin-top: 5%;
+            width: 400px;
+            height: 400px;
+            border-radius: 30px;
+            background-color: grey;
+            float: left;
+            box-shadow: 5px 5px 5px rgb(113, 113, 113);
+
+        }
+        .name{
+            margin-left: 5%;
+            margin-top: 5%;
+            max-width: fit-content;
+            min-width: 10%;
+            min-height: 50px;
+            max-height: fit-content;
+            float: left;
+        }
+        .about{
+            width: 50%;
+            height: 400px;
+            float: left;
+            margin-left: 5%;
+            margin-top: 2%;
+            font-family: Verdana;
+            font-size: larger;
+            line-height: 30px;
+        }
+        .edu{
+            font-family: 'Segoe UI', Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .edu-blocks{
+            width: 80%;
+            margin: auto;
+            min-height: 300px;
+            max-height: fit-content;
+        }
+        .edu-block{
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 5px rgb(113, 113, 113);
+            margin-top: 20px;
+            width: 300px;
+            height: 150px;
+            border-radius: 30px;
+            padding: 25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .certification{
+            width: 80%;
+            min-height: 400px;
+            max-height: fit-content;
+            margin: auto;
+        }
+        .cert{
+            background-color: rgb(255, 255, 255);
+            box-shadow: 5px 5px 5px rgb(113, 113, 113);
+            margin-top: 20px;
+            width: 300px;
+            height: 150px;
+            border-radius: 30px;
+            padding: 25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .left{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 10%;
+
+
+        }
+        .right{
+            float: right;
+            width: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: baseline;
+        }
+        h2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: xx-large;
+        }
+        .experiance{
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+        .blocks-inline{
+            width: 100%;
+        }
+        .projects{
+            width: 100%;
+            height: 400px;
+        }
+        .contact {
+            width: 100%;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact h3.edu {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .contact-form {
+            width: 80%;
+            max-width: 600px;
+            background-color: #f5f5f5;
+            padding: 30px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        textarea:focus {
+            border-color: #007BFF;
+            box-shadow: 2px 2px 10px rgba(0, 123, 255, 0.2);
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 123, 255, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            box-shadow: 2px 2px 15px rgba(0, 123, 255, 0.3);
+        }
+        footer{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-form {
+                width: 90%;
+            }
+            .img-div{
+                width: 80%;
+                height: 300px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white p-2">
+        <a class="navbar-brand text-light" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'logout' %}">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <!--<div class="hero">
+            <div class="img-div">
+
+            </div>
+            <div class="name">
+                <h2>Mohammed Sadiq Ali</h2>
+            </div>
+            <div class="about">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis doloribus sequi ut, molestias, dignissimos veniam, dolor rem repellat quae dolorem libero architecto quidem maiores placeat fugit! Optio, illo magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolorum eveniet, vero dolore velit possimus mollitia eligendi provident, aliquam libero amet consectetur officia fuga praesentium, ab officiis accusamus voluptatem numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolorem expedita dicta, laboriosam atque voluptatum magnam, doloremque tenetur veritatis aut aperiam vero quibusdam deleniti magni, fuga minus neque aspernatur beatae.</p>
+            </div>
+        </div>
+    -->
+    {% if user %}
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="img-div">
+                <img src="{{ user.profile.url }}" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+        <div class="col-sm-6 mt-5">
+            <h1>{{ user.fullname }}</h1>
+            <p class="p mt-5">{{ user.description}}</p>
+        </div>
+    {% endif %}
+
+    </div>
+        <h3 class="edu mt-5">Education</h3>
+        {% if edu %}
+        <div class="left mt-3">
+            <div class="row">
+                {% for ed in edu %}
+                <div class="col-sm-3 mt-5 mt-5 ">
+                    <div class="card shadow " style="width: 18rem;">
+                        <img class="card-img-top" src="{{ ed.image.url }}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ ed.course }}</h5>
+                          <p class="card-text">{{ ed.institute }}</p>
+                          <a href="#" class="btn btn-primary">Know More</a>
+                        </div>
+                      </div>
+                </div> 
+                {% endfor %}
+            </div>  
+        </div>
+        {% endif %}
+
+        
+        <h3 class="edu">certification</h3>
+        {% if cert %}
+        <div class="left">
+            <div class="row">
+                {% for certifcate in cert %}
+                <div class="col-sm-3 mt-5">
+                    <div class="card shadow " style="width: 18rem;">
+                        <img class="card-img-top" src="certifcate.image.url" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{certifcate.domain}}</h5>
+                          <p class="card-text">{{certifcate.duration}}</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div> 
+                {% endfor %}     
+            </div>
+        </div>
+        {% endif %}
+        
+        <h3 class="edu">Experiance</h3>
+        {% if exper %}
+        <div class="left">
+            <div class="row">
+                {% for experiance in  exper %}
+                <div class="col-sm-3 mt-5">
+                    <div class="card shadow" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ experiance.image }}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ experiance.company_name }}</h5>
+                          <p class="card-text">{{ experiance.domain }}</p>
+                          <a href="#" class="btn btn-primary">Know More</a>
+                        </div>
+                      </div>
+                </div> 
+                {% endfor %}          
+            </div>
+        </div>
+        {% endif %}
+
+
+        <h3 class="edu">Projects</h3>
+        {% if project %}
+        <div class="left">
+            <div class="row">
+                {% for item in project %}
+                <div class="col-sm-3 mt-5">
+                    <div class="card shadow " style="width: 18rem;">
+                        <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ item.project_name }}</h5>
+                          <p class="card-text">{{ item.link }}</p>
+                          <a href="#" class="btn btn-primary">Know More</a>
+                        </div>
+                    </div>  
+                </div>
+                {% endfor %}    
+            </div>
+        </div>
+        {% endif %}
+        <div class="contact">
+            <h3 class="edu mt-5">Contact</h3>
+            <div class="contact-form">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="mail" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="number" name="number" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="query">Query:</label>
+                        <textarea id="query" name="query" rows="5" placeholder="Enter your message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        copyright@sadiq
+    </footer>
+</body>
+</html>
